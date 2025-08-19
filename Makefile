@@ -3,6 +3,7 @@ DEP	=	dep
 EXE = ${OBJ}/bin
 
 COMMIT := $(shell git log -1 --pretty=format:"%H")
+CPU_ARCH := $(shell ${CC} -dumpmachine)
 
 ARCH =
 ifeq ($m, 32)
